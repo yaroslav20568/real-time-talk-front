@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import '@/shared/styles/globals.scss';
+import { titleApp } from '@/shared';
+
+import '@/shared/styles';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -9,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Real-time-talk',
-  description: 'Real-time-talk Websockets chats and WebRTC calls'
+  title: titleApp,
+  description: `${titleApp} Websockets chats and WebRTC calls`
 };
 
 export default function RootLayout({
