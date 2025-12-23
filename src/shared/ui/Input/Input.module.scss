@@ -1,0 +1,56 @@
+@use '../../styles/_variables.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+
+  .label {
+  }
+
+  .input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: $white;
+    outline: none;
+    transition: border-color 0.2s;
+
+    color: $black;
+    font-weight: 400;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+    }
+
+    &:focus {
+      border-color: #615ef0;
+    }
+  }
+
+  &.inputDisabled {
+    .input {
+      background: #f3f3f3;
+      cursor: not-allowed;
+    }
+  }
+
+  &.inputError {
+    .input {
+      border-color: #f56565;
+
+      &:focus {
+        border-color: #f56565;
+      }
+    }
+  }
+
+  .error {
+    color: #f56565;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
