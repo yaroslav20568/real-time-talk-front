@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 
 import { titleApp } from '@/shared';
 
-import '@/shared/styles';
+import '@/app/styles';
 
 const inter = Inter({
   variable: '--font-inter',
