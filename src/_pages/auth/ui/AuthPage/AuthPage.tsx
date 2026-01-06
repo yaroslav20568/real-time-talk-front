@@ -1,13 +1,11 @@
-import { AuthForm } from '@/widgets/AuthForm';
+import { AuthForm } from '@/widgets/auth/ui/AuthForm';
 
 import s from './AuthPage.module.scss';
 
-const AuthPage = () => {
+export const AuthPage = () => {
   return (
     <div className={s.authPage}>
       <AuthForm />
     </div>
   );
 };
-
-export default AuthPage;
