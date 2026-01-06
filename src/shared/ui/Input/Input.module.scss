@@ -12,7 +12,7 @@
   .input {
     width: 100%;
     padding: 12px 20px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid $borderLight;
     border-radius: 12px;
     background-color: $white;
     outline: none;
@@ -22,34 +22,34 @@
     font-weight: 400;
 
     &::placeholder {
-      color: rgba(0, 0, 0, 0.4);
+      color: $placeholder;
       opacity: 1;
     }
 
     &:focus {
-      border-color: #615ef0;
+      border-color: $primary;
     }
   }
 
   &.inputDisabled {
     .input {
-      background: #f3f3f3;
+      background: $backgroundDisabled;
       cursor: not-allowed;
     }
   }
 
   &.inputError {
     .input {
-      border-color: #f56565;
+      border-color: $error;
 
       &:focus {
-        border-color: #f56565;
+        border-color: $error;
       }
     }
   }
 
   .error {
-    color: #f56565;
+    color: $error;
     font-size: 12px;
     font-weight: 400;
   }

@@ -1,0 +1,62 @@
+@use 'app/styles/variables.scss' as *;
+
+.button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.underline {
+    background: transparent;
+    color: $gray;
+    padding: 12px 20px;
+    position: relative;
+
+    &:hover:not(:disabled) {
+      color: $black;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $primary;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+
+    &.active {
+      color: $black;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &.filled {
+    background-color: $primary;
+    color: $white;
+    padding: 12px 24px;
+    border-radius: 12px;
+
+    &:hover:not(:disabled) {
+      background-color: $primaryHover;
+    }
+
+    &:active:not(:disabled) {
+      background-color: $primaryActive;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use 'app/styles/variables.scss' as *;
+
+.wrapper {
+  width: 100%;
+
+  .tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid $borderLight;
+
+    .tab {
+      &.tabActive {
+        color: $black;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+}
