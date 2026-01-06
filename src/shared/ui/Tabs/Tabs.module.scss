@@ -9,6 +9,8 @@
     border-bottom: 2px solid $borderLight;
 
     .tab {
+      flex: 1;
+
       &.tabActive {
         color: $black;
 
