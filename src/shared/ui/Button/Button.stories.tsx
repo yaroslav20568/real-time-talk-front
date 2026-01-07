@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { EyeIcon } from '@/shared/ui/Icons';
+
 import { Button } from './Button';
 
 const meta = {
@@ -12,7 +14,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['tab', 'filled']
+      options: ['tab', 'filled', 'icon']
     }
   }
 } satisfies Meta<typeof Button>;
@@ -61,6 +63,21 @@ export const DisabledTab: Story = {
   args: {
     variant: 'tab',
     children: 'Disabled Button',
+    disabled: true
+  }
+};
+
+export const Icon: Story = {
+  args: {
+    variant: 'icon',
+    children: <EyeIcon />
+  }
+};
+
+export const IconDisabled: Story = {
+  args: {
+    variant: 'icon',
+    children: <EyeIcon />,
     disabled: true
   }
 };
