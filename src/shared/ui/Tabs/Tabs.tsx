@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import cn from 'classnames';
+import { AnimatePresence, motion } from 'motion/react';
 
 import { Button } from '@/shared/ui/Button';
 
@@ -45,7 +46,18 @@ export const Tabs = <T = string,>({
           </Button>
         ))}
       </div>
-      <div className={s.content}>{activeTab?.content}</div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={String(activeValue)}
+          className={s.content}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
+          {activeTab?.content}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
