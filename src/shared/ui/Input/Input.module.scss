@@ -6,7 +6,9 @@
   gap: 4px;
   width: 100%;
 
-  .label {
+  .inputWrapper {
+    position: relative;
+    width: 100%;
   }
 
   .input {
@@ -29,11 +31,22 @@
     &:focus {
       border-color: $primary;
     }
+
+    &.inputWithButton {
+      padding-right: 44px;
+    }
+  }
+
+  .toggleButton {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &.inputDisabled {
     .input {
-      background: $backgroundDisabled;
+      background-color: $backgroundDisabled;
       cursor: not-allowed;
     }
   }
