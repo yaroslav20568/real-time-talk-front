@@ -38,7 +38,7 @@ export const Tabs = <T = string,>({
           <Button
             key={String(tab.value)}
             type="button"
-            variant="underline"
+            variant="tab"
             className={cn(s.tab, { [s.tabActive]: activeValue === tab.value })}
             onClick={() => setActiveValue(tab.value)}
           >

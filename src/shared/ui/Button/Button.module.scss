@@ -16,7 +16,7 @@
     cursor: not-allowed;
   }
 
-  &.underline {
+  &.tab {
     color: $gray;
     padding: 12px 20px;
     position: relative;
@@ -34,7 +34,7 @@
       height: 2px;
       background-color: $primary;
       transform: scaleX(0);
-      transition: transform 0.2s;
+      transition: transform 0.3s;
     }
 
     &.active {

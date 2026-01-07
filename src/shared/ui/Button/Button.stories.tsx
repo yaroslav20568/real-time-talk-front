@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['underline', 'filled']
+      options: ['tab', 'filled']
     }
   }
 } satisfies Meta<typeof Button>;
@@ -28,9 +28,9 @@ export const Filled: Story = {
   }
 };
 
-export const Underline: Story = {
+export const Tab: Story = {
   args: {
-    variant: 'underline',
+    variant: 'tab',
     children: 'Button'
   }
 };
@@ -42,9 +42,9 @@ export const FilledWithText: Story = {
   }
 };
 
-export const UnderlineWithLongText: Story = {
+export const TabWithLongText: Story = {
   args: {
-    variant: 'underline',
+    variant: 'tab',
     children: 'Long Button Text'
   }
 };
@@ -57,9 +57,9 @@ export const Disabled: Story = {
   }
 };
 
-export const DisabledUnderline: Story = {
+export const DisabledTab: Story = {
   args: {
-    variant: 'underline',
+    variant: 'tab',
     children: 'Disabled Button',
     disabled: true
   }

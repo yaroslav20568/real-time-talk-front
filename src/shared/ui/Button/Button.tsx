@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import s from './Button.module.scss';
 
-type TButtonVariant = 'underline' | 'filled' | 'icon';
+type TButtonVariant = 'tab' | 'filled' | 'icon';
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: TButtonVariant;
@@ -22,7 +22,7 @@ export const Button: FC<IProps> = ({
       className={cn(
         s.button,
         {
-          [s.underline]: variant === 'underline',
+          [s.tab]: variant === 'tab',
           [s.filled]: variant === 'filled',
           [s.icon]: variant === 'icon'
         },
