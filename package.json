@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^5.2.2",
     "@storybook/addon-docs": "^10.1.10",
     "@storybook/nextjs": "^10.1.10",
+    "axios": "^1.13.2",
     "classnames": "^2.5.1",
     "motion": "^12.24.8",
     "next": "16.1.0",
