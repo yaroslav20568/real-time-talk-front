@@ -5,10 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { Button, Input } from '@/shared';
 
-import {
-  LoginFormData,
-  loginFormSchema
-} from '@/features/auth/validation/loginForm.schema';
+import { LoginFormData, loginFormSchema } from '@/features/auth/validation';
 
 import s from './LoginForm.module.scss';
 

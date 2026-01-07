@@ -1,10 +1,14 @@
 import * as yup from 'yup';
 
 export const registerFormSchema = yup.object({
-  name: yup
+  firstName: yup
     .string()
-    .min(2, 'Name must be at least 2 characters')
-    .required('Name is required'),
+    .min(2, 'First name must be at least 2 characters')
+    .required('First name is required'),
+  lastName: yup
+    .string()
+    .min(2, 'Last name must be at least 2 characters')
+    .required('Last name is required'),
   email: yup
     .string()
     .email('Please enter a valid email')

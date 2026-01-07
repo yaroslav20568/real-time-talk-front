@@ -8,7 +8,7 @@ import { Button, Input } from '@/shared';
 import {
   RegisterFormData,
   registerFormSchema
-} from '@/features/auth/validation/registerForm.schema';
+} from '@/features/auth/validation';
 
 import s from './RegisterForm.module.scss';
 
@@ -30,9 +30,15 @@ export const RegisterForm = () => {
     <form className={s.registerForm} onSubmit={handleSubmit(onSubmit)}>
       <Input
         type="text"
-        label="Name"
-        {...register('name')}
-        error={errors.name?.message}
+        label="First Name"
+        {...register('firstName')}
+        error={errors.firstName?.message}
+      />
+      <Input
+        type="text"
+        label="Last Name"
+        {...register('lastName')}
+        error={errors.lastName?.message}
       />
       <Input
         type="email"
